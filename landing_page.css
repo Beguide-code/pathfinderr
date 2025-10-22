@@ -1,6 +1,124 @@
-*{background-color: aqua;}
+*{background-color: rgb(208, 131, 131);}
 
 body{
+    font-family: 'Inter', sans-serif;
+    background-color: #fcfaff;
+    color: #333;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    min-height: 100vh; /* enlever les 3 dernier en cas de js */
+}
+.logo-content {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    padding: 10px 20px;
+    background-color: beige;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    z-index: 1000;
+    text-align: center;
+   
+}
+
+.landing-content{
+    padding-top: 60px; 
+    padding-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin : 0 auto;
+}
+.text-content{
+    flex: 1;
+    padding: 10px;
+    min-width: 340px;
+    box-sizing: border-box;
+}
+.image-content{
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    min-width: 340px;
+}
+h1{
+    font-family: 'Playfair Display', serif; 
+    font-size: 3.5rem;
+    color: #222;
+    margin: 10px 0;
+    text-align: center;
+}
+p{
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+}
+.button-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 150px;
+}
+.signup-button {
+     background-color: #3b3b3b;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin: center;
+}
+.signup-button:hover{
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px) scale(1.05); /* Se soulève ET grossit */
+}
+.image-content{
+     flex: 1;
+    border-radius: 20px;
+    overflow: hidden; /* les weps qui depassent*/
+    background-image: url('image1.jpg');
+    background-size: cover; /* couvrir le bloc */
+    background-position: center;
+    min-height: 400px; /* jsais pas vraiment a quoi ça sert */
+}
+
+.son{
+    bottom: 0;
+    background-color: rgb(206, 255, 196);
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 0;
+}
+@media (max-width: 900px) {
+    .landing-content {
+        /* to column */
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 2.8rem; /* prop de l'ordi*/
+    }
+}
+
+/* pour phone 500px*/
+@media (max-width: 500px) {
+    body {
+        padding: 10px; /* les cotes */
+    }
+
+    h1 {
+        font-size: 2.2rem; 
+    }
 }

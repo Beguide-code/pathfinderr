@@ -5,13 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link rel="stylesheet" href="landing_page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </html>
 <body>
-    <div class="container">
-        <h1>Welcome to Our Website</h1>
-        <p>Your journey to excellence starts here.</p>
-        <a href="main.html" class="enter-button">Enter Site</a>
-        <h2>About US</h2>
-    </div>
+   <header class="logo-content">
+    <a href="index.html" id="Logo">
+        <img src=".png" alt="Logo" height="80">
+    </a>
+   </header> 
+      <section class="landing-content">
+        <div class="text-content">  
+         <h1>Welcome to Pathfinderr</h1>
+            <p>Here your journey to excellence starts here. 
+            With us you will find the resources and support 
+            you need to achieve your goals. So why wait? Join us today 
+            and take the first step towards a brighter future!
+            </p>
+            <div class="button-container">
+             <button class="signup-button" onclick="location.href='main.html'">Log in as a student</button>
+             <button class="signup-button" onclick="location.href='admin_login.html'">Log in as a mentor</button>
+         <!-- onclick nous dirige vers une autre page| js property -->
+            </div>
+        </div>
+        <div class="image-content">
+            </div> 
+        </div>
+      </section>
+   <footer class="son">
+        <p>&copy; 2024 Pathfinderr. All rights reserved.</p>
+   </footer>
 </body>
 </html>
