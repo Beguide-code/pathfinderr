@@ -1,4 +1,4 @@
-*{background-color: rgb(208, 131, 131);}
+
 
 body{
     font-family: 'Inter', sans-serif;
@@ -16,7 +16,7 @@ body{
     width: 100%;
     height: auto;
     padding: 10px 20px;
-    background-color: beige;
+    background-color: #fcfaff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     z-index: 1000;
@@ -68,7 +68,7 @@ p{
     padding: 0 150px;
 }
 .signup-button {
-     background-color: #3b3b3b;
+     background-color: #3b49df;
     color: white;
     border: none;
     padding: 15px 30px;
@@ -91,16 +91,19 @@ p{
     background-size: cover; /* couvrir le bloc */
     background-position: center;
     min-height: 400px; /* jsais pas vraiment a quoi ça sert */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .son{
     bottom: 0;
-    background-color: rgb(206, 255, 196);
+    background-color:#232fb6 ;
+    
     width: 100%;
     text-align: center;
     padding-top: 50px;
     margin-bottom: 0;
 }
+.son p {color: #ffffff;}
 @media (max-width: 900px) {
     .landing-content {
         /* to column */

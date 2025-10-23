@@ -1,0 +1,135 @@
+
+/* Style de base et centrage */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color:  #333;
+}
+
+
+.login-content {
+    background-color: #ffffff;
+    padding: 2.5rem; /* 40px */
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-sizing: border-box; /* Assure que le padding n'affecte pas la largeur */
+}
+
+/* Conteneur du logo */
+.logo-content {
+    width: 60px;
+    height: 60px;
+    background-color: #3b49df;
+     border-radius: 50%; /*optionel si le logo est deja en forme de cercle */
+    margin: 0 auto 1.5rem; /* Centrer et espacer en dessous */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 32px;
+    height: 32px;
+}
+
+h2 {
+    font-size: 1.75rem; /* donner par lordi */
+    font-weight: 600;
+    margin-bottom: 2rem; /* donner par lordi */
+}
+
+.input-content {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.input-content label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px; 
+    font-weight: 500;
+}
+
+.input-content input {
+    width: 100%;
+    padding: 0.75rem; /* 12px */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box; /* Important pour que le padding naugmente pas la largeur */
+    font-size: 1rem;
+}
+/*ce qui change les bailles de derriere*/
+.input-content input:focus {
+    outline: none;
+    border-color: 3b49df;
+    box-shadow: 0 0 0 2px rgba(59, 73, 223, 0.2);
+}
+
+/* js message derreur */
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+    display: none; /* Cache par defaut */
+    margin-top: 0.25rem;
+}
+
+.Next {
+    width: 100%;
+    padding: 0.875rem; /* 14px */
+    border: none;
+    border-radius: 8px;
+    background-color:#3b49df ;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.Next:hover {
+    background-color: #2c37b0;
+}
+
+.help {
+    margin-top: 1.5rem;
+}
+
+.help a {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: #3b49df;
+    text-decoration: underline;
+    font-size: 0.875rem;
+}
+
+/* Ligne de separation tres important */
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 1.5rem 0;
+}
+.signup-link {
+    font-size: 0.875rem;
+}
+.SignUp span {
+    color: #555;
+}
+.SignUp a {
+    color: #3b49df;
+    text-decoration: underline;
+    font-weight: 500;
+}
+.SignUp a:hover {
+    color: #c62222;
+}
+.help a:hover {
+    color:#c62222 ;
+}
