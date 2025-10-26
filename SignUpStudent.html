@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="SignUpStudent.css">
+  <title>For student</title>
+    </head>
+    <body>
+
+    <main class="main-content">
+        
+        <ol class="progress-bar">
+            <li class="progress-step active">1</li>
+            <li class="progress-step">2</li>
+        </ol>
+
+        <h1>Create Your Student Account</h1>
+        
+        <div class="important">
+            <strong>Important:</strong> To create your account, please fill out the fields below. 
+            This account will give you access to your dashboard.
+        Please make sure you enter your email address correctly to receive important notifications.
+        If you have any issues, contact support at davidparfait07@gmail.com .
+        </div>
+
+        <p class="required-note">* = Required</p>
+
+        <form class="signup-form" action="#" method="post">
+            
+            <div class="form-group">
+                <label for="first-name">First name: *</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+
+             <div class="form-group">
+                <label for="surname">Surname: *</label>
+                <input type="text" id="Surname" name="sur-name" required>
+            </div>
+
+             <div class="form-group">
+                <label for="birth-date">Date of birth: *</label>
+                <input type="date" id="birth-date" name="birth-date" required>
+            </div> 
+
+             <div class="form-group">
+                <label for="user-tel">Cellphone:</label>
+                <input type="tel" id="user-tel" name="user-tel">
+            </div>
+
+            <div class="form-group">
+               <fieldset>
+              <legend>Address:</legend>
+
+               <label for="street">Street :</label>
+               <input type="text" id="street" name="user_address_street">
+
+               <label for="pc">Postal code :</label>
+               <input type="text" id="pc" name="user_address_zip">
+
+               <label for="user-city">City :</label>
+               <input type="text" id="user-city" name="user_address_city">
+
+               <label for="country">Country : *</label>
+               <select id="country" name="user_address_country" required>
+                <option value="france">France</option>
+                <option value="belgique">Belgique</option>
+                <option value="suisse">Bawin</option>
+               </select>
+                 </fieldset>
+            </div>
+
+            <div class="form-group">
+               <label for="user-email">Enter your email address: *</label>
+               <input type="email" id="user-email" name="useremail" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-email">Confirm email address: *</label>
+                <input type="email" id="confirm-email" name="confirm-email" required>
+            </div>
+
+
+            <div class="form-group">
+               <label for="user-password">Enter your password: *</label>
+               <input type="password" id="user-password" name="user-password" required>
+            </div>
+
+            <div class="form-group">
+               <label for="confirm-password">Confirm your password: *</label>
+               <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+          
+
+            <button type="submit" class="submit-btn"  onclick="location.href='SignUpStudent2.html'">Next Step</button>
+ 
+                
+        </form>
+
+    </main>
+    </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+ * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #fff;
+            color: var(--color-text);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Conteneur principal du formulaire */
+        .main-content {
+            max-width: 800px;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        /* Barre de progression */
+        .progress-bar {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .progress-bar::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-border);
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        .progress-step {
+            width: 36px;
+            height: 36px;
+            background-color: #fff;
+            border: 2px solid var(--color-border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--color-border);
+            position: relative;
+            z-index: 2;
+        }
+
+        .progress-step.active {
+            background-color: var(--color-primary);
+            border-color: var(--color-primary);
+            color: #fff;
+        }
+
+  </style>
+  <title>For student</title>
+    </head>
+    <body>
+        <main class="main-content">
+          <ol class="progress-bar">
+            <li class="progress-step">1</li>
+            <li class="progress-step active">2</li>
+          </ol>
+        </main>
+    </body>
+</html>
