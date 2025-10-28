@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+
  * {
             box-sizing: border-box;
             margin: 0;
@@ -13,21 +14,19 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: #fff;
-            color: var(--color-text);
+            color: #333;
             line-height: 1.6;
             display: flex;
             justify-content: center;
             padding: 20px;
         }
-
-        /* Conteneur principal du formulaire */
         .main-content {
             max-width: 800px;
             width: 100%;
             margin: 20px 0;
         }
 
-        /* Barre de progression */
+        /* la barre */
         .progress-bar {
             position: relative;
             display: flex;
@@ -45,7 +44,7 @@
             left: 0;
             width: 100%;
             height: 2px;
-            background-color: var(--color-border);
+            background-color: #ccc;
             transform: translateY(-50%);
             z-index: 1;
         }
@@ -54,22 +53,53 @@
             width: 36px;
             height: 36px;
             background-color: #fff;
-            border: 2px solid var(--color-border);
+            border: 2px solid #ccc;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            color: var(--color-border);
+            color: #ccc;
             position: relative;
             z-index: 2;
         }
 
         .progress-step.active {
-            background-color: var(--color-primary);
-            border-color: var(--color-primary);
+            background-color:#2c37b0;
+            border-color:#2c37b0;
             color: #fff;
         }
+    .congrat-content{
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    min-height: 100vh;
+    margin: 0;
+    color:  #333;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      padding: 2.5rem; /* 40px */
+      border-radius: 16px;
+      width: 100%;
+    text-align: center;
+    box-sizing: border-box; 
+    }
+    .next {
+          width: 70%;
+    padding: 0.875rem; /* 14px */
+    border: none;
+    border-radius: 15px;
+    background-color:#3b49df ;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    }
+    .next:hover{ background-color: #2c37b0;}
 
   </style>
   <title>For student</title>
@@ -80,6 +110,15 @@
             <li class="progress-step">1</li>
             <li class="progress-step active">2</li>
           </ol>
+
+          <div class="congrat-content">
+           <h1>🎉 Congratulations !</h1>
+           <h2>Your account has been successfully created.</h2>
+           <p>Welcome to our website! We are delighted 
+            to have you as one of our members.   Press the belows button...</p>
+            
+           <button type="submit" class="next">Go to home page</button>
+          </div>
         </main>
     </body>
 </html>
