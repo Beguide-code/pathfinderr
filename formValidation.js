@@ -125,7 +125,7 @@ function showHidePassword(){
     let closeEye = document.querySelector(".eyeClosed");
     let input = document.getElementById("password");
     toggle.forEach(icon =>{
-        iconaddEventListener("click", () => {
+        icon.addEventListener("click", () => {
         if(input.type === "password"){
             input.type = "text";
             closeEye.style.display = "none";
