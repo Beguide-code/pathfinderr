@@ -87,7 +87,7 @@ p{
      flex: 1;
     border-radius: 20px;
     overflow: hidden; /* les weps qui depassent*/
-    background-image: url('image1.jpg');
+    background-image: url('LP.jpg');
     background-size: cover; /* couvrir le bloc */
     background-position: center;
     min-height: 400px; /* jsais pas vraiment a quoi ça sert */
@@ -96,11 +96,11 @@ p{
 
 .son{
     bottom: 0;
-    background-color:#636cd1 ;
+    background-color:#20489d ;
     
     width: 100%;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 5px;
     margin-bottom: 0;
 }
 .son p {color: #ffffff;}

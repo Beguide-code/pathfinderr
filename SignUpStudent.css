@@ -134,7 +134,7 @@
 
         /* Bouton de soumission (non visible sur l'image mais nécessaire) */
         .submit-btn {
-            background-color: #007bff;
+            background-color: #3d47b1;
             color: #fff;
             font-size: 1rem;
             font-weight: bold;
@@ -149,7 +149,7 @@
         }
 
         .submit-btn:hover {
-            background-color: #2c37b0;
+            background-color: #101db5;
         }
         .error-message {
             color: red;
