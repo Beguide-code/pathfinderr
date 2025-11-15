@@ -27,7 +27,7 @@ body {
 .logo-content {
     width: 60px;
     height: 60px;
-    background-color: #3b49df;
+    /* background-color: #007bff; */
      border-radius: 50%; /*optionel si le logo est deja en forme de cercle */
     margin: 0 auto 1.5rem; /* Centrer et espacer en dessous */
     display: flex;
@@ -95,7 +95,7 @@ input.success {
     padding: 0.875rem; /* 14px */
     border: none;
     border-radius: 8px;
-    background-color:#3b49df ;
+    background-color:#007bff ;
     color: white;
     font-size: 1rem;
     font-weight: 600;
@@ -114,7 +114,7 @@ input.success {
 .help a {
     display: block;
     margin-bottom: 0.75rem;
-    color: #3b49df;
+    color: #007bff;
     text-decoration: underline;
     font-size: 0.875rem;
 }
@@ -132,7 +132,7 @@ hr {
     color: #555;
 }
 .SignUp a {
-    color: #3b49df;
+    color: #007bff;
     text-decoration: underline;
     font-weight: 500;
 }

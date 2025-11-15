@@ -63,8 +63,8 @@
         }
 
         .progress-step.active {
-            background-color: #2c37b0;
-            border-color: #2c37b0;
+            background-color: #007bff;
+            border-color: #007bff;
             color: #fff;
         }
 
@@ -134,7 +134,7 @@
 
         /* Bouton de soumission (non visible sur l'image mais nécessaire) */
         .submit-btn {
-            background-color: #3d47b1;
+            background-color: #007bff;
             color: #fff;
             font-size: 1rem;
             font-weight: bold;

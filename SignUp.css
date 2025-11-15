@@ -57,7 +57,7 @@ body {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: #2c37b0; /* Couleur bleu clair de l'image */
+    background-color: #007bff; /* Couleur bleu clair de l'image */
     display: flex;
     justify-content: center;
     align-items: center;
