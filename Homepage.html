@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pathfinderr</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="Homepage.css">
 </head>
 <body>
@@ -22,11 +23,12 @@
             <div class="menu-container">
                 <nav>
                     <ul>
+                       
                         <li><a href="#contact">Contact</a></li>
-                        <li><a href="SignUp.html" >Student/Mentor</a></li>
-                        <li><a href="#">Opportunities</a></li>
-                        <li><a href="#">My profile</a></li>
-                        <!-- je dois mettre le logIn ici -->
+                         <li><a href="">LogIn</a></li>
+                        <li><a href="">Student/Mentor</a></li>
+                        <li><a href="">Opportunities</a></li>
+                        <li><a href="">My profile</a></li>
                     </ul>
                 </nav>
                 
@@ -38,23 +40,45 @@
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
+
+    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+           <div class="hero">  <div class="container">
                 <h1>Find the perfect scholarship.</h1>
                 <p class="sous-titre">Pathfinderr centralises scholarships and connects you with experts to optimise your applications.</p>
-                 <a href="#" class="cta-bouton">I'm looking for a scholarship/Interships</a>
-                <a href="#" class="cta-bouton">I want to be mentor</a>
+                 <a href="" class="cta-bouton">I'm looking for a scholarship</a>
             </div>
-             <!-- <div class="container">
-                <h1>Find the perfect scholarship. Get a mentor to help you secure it.</h1>
+        </div>
+          <div class="carousel-caption d-none d-md-block">
+           </div>
+          
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+         
+             <div class="hero"><div class="container">
+                <h1>Get a mentor to help you secure it.</h1>
                 <p class="sous-titre">Pathfinderr centralises scholarships and connects you with experts to optimise your applications.</p>
                 <a href="#projets" class="cta-bouton">I want to be mentor</a>
                 
-            </div> Si je trouve comment faire bouger en css ou meme js , je fais avec ça apres -->
-        </section>
+            </div></div>
+        </div>
+    </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
-        <section id="HowItWorks" class="container section-padding">
+     <section id="HowItWorks" class="container section-padding">
             <h2>How it works</h2>
             <p>
                 Step 1: Sign up as a student or mentor.<br>
@@ -89,36 +113,40 @@
             </div>
         </section>
 
-         <section class="container section-padding">
-            <div class="container">
+ <section class="container section-padding">
+    <div class="container">
                  <h2>Discover Some Of Our Opportunities</h2>
-                <div class="image-grid">
-                   <div class="card-1">
-                      <div class="card-front">
-                        <img decoding="async" src="image1 (2).jpg" alt="">
-                      </div>
-
-                      <div class="card-back">
-                        <h3>Türkiye Scholarships</h3>
-                        <p>For more details about this scholarship:</p>
-                        <a href="#">Learn More</a>
-                      </div>
-                   </div>
-
-                    <div class="card-2">
-                      <div class="card-front">
-                        <img decoding="async" src="Budapest.jpg" alt="">
-                      </div>
-
-                      <div class="card-back">
-                        <h3>Stipendium Hungaricum Scholarship</h3>
-                        <p>For more details about this scholarship:</p>
-                        <a href="#">Learn More</a>
-                      </div>
-                   </div>
+        <div class="carousel-inner">
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+              <div class="carousel-item active">
+               <img src="Budapest.jpg" class="d-block w-100" alt="...">
+              
+               <div class="carousel-caption d-md-block"> 
+                 <h3>Stipendium hungaricum scholarship</h3>
+                 <p>Scholarship for international students to study in Hungary.</p>
+                  <a href="" class="cta-bouton">See more</a>
+               </div>
+              </div>
+              <div class="carousel-item">
+                <img src="image1 (2).jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption  d-md-block">
+                   <h3>Türkiye Scholarship</h3>
+                   <p>Scholarship for international students to study in Türkiye.</p>
+                    <a href="" class="cta-bouton">See more</a>
                 </div>
-            </div>
-         </section>
+              </div>
+          
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+           <span class="visually-hidden">Previous</span>
+         </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+  </section>
 
         <section id="mentor" class="section-grise section-padding">
             <div class="container">
@@ -157,6 +185,9 @@
             <p class="copyright">&copy; 2025 Pathfinderr. All rights reserved..</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
 
 </body>
 </html>

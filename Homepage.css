@@ -1,17 +1,97 @@
+/* $carousel-control-width: 15%; */
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 15%; /* Augmente la zone cliquable du contrôle */
+      }
+      
+      /* $carousel-control-opacity: .5; (Opacité par défaut)
+         $carousel-control-hover-opacity: .9;
+         $carousel-control-transition: opacity .15s ease; 
+      */
+      .carousel-control-prev,
+      .carousel-control-next {
+        opacity: .5;
+        transition: opacity .15s ease;
+      }
+      .carousel-control-prev:hover,
+      .carousel-control-next:hover {
+        opacity: .9; /* Opacité au survol */
+      }
+      
+      /* $carousel-control-icon-width: 2rem; */
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+          height: 2rem;
+          width: 2rem;
+      }
+
+      /* $carousel-control-color: $white; */
+      .carousel-control-prev-icon {
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0'/></svg>");
+      }
+      .carousel-control-next-icon {
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708'/></svg>");
+      }
+
+      /* $carousel-indicator-width: 30px; et $carousel-indicator-height: 3px; */
+      .carousel-indicators [data-bs-target] {
+          width: 30px;
+          height: 3px;
+          /* $carousel-indicator-opacity: .5; et $carousel-indicator-transition: opacity .6s ease; */
+          opacity: .5;
+          transition: opacity .6s ease;
+      }
+      
+      /* $carousel-indicator-spacer: 3px; */
+      .carousel-indicators button {
+        margin-right: 3px;
+        margin-left: 3px;
+      }
+
+      /* $carousel-indicator-active-bg: $white; et $carousel-indicator-active-opacity: 1; 
+         Pour forcer l'indicateur actif en BLANC (car vous utilisez `carousel-dark`)
+      */
+      .carousel-indicators .active {
+          background-color: white; 
+          opacity: 1;
+      }
+
+      /* --- Personnalisation des Captions (Titres et texte) --- */
+      
+      /* $carousel-caption-width: 70%; */
+      .carousel-caption {
+          width: 70%;
+          left: 50%;
+          transform: translateX(-50%);
+          /* $carousel-caption-padding-y: 1.25rem; */
+          padding-top: 1.25rem;
+          padding-bottom: 1.25rem;
+          /* $carousel-caption-color: $white; */
+          color: white; 
+      }
+
+        :root {
+    --couleur-principale: #007bff;
+    --couleur-secondaire: #343a40;
+    --couleur-fond: #f8f9fa;
+    --couleur-blanc: #ffffff;
+}
+
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: #343a40; }
+body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: var(--couleur-secondaire); }
 .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
 .section-padding { padding: 60px 0; }
-.section-grise { background-color:#f8f9fa; }
+.section-grise { background-color: var(--couleur-fond); }
 h1, h2, h3 { margin-bottom: 20px; }
 h2 { text-align: center; font-size: 2.5rem; }
 p { margin-bottom: 15px; }
-a { color: #007bff; text-decoration: none; }
+a { color: var(--couleur-principale); text-decoration: none; }
 
-/* Header part */
+
 header {
-    background: #ffffff;
+    background: var(--couleur-blanc);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     padding: 20px 0;
     position: sticky;
@@ -23,23 +103,23 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* imp pour le postionnement */
+    /* Requis pour le positionnement du menu mobile */
     position: relative;
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #343a40;
-    /* logo up */
+    color: var(--couleur-secondaire);
+    /* le logo reste au-dessus du menu mobile */
     z-index: 10;
 }
 
-/* nav + search */
+
 .menu-container {
     display: flex;
     align-items: center;
-    gap: 20px; 
+    gap: 20px; /* Espace entre le menu et la recherche */
 }
 
 nav ul {
@@ -60,7 +140,7 @@ nav ul li a:hover {
     color: #0056b3;
 }
 
-/* barre de search */
+
 .search-bar {
     display: flex;
 }
@@ -68,18 +148,18 @@ nav ul li a:hover {
 .search-bar input[type="search"] {
     border: 1px solid #ccc;
     padding: 8px 12px;
-    border-radius: 8px 0 0 8px; 
+    border-radius: 8px 0 0 8px; /* arrondis,gauche */
     font-size: 0.9rem;
     outline: none;
 }
 
 .search-bar button {
-    background: #007bff;
+    background: var(--couleur-principale);
     border: none;
     color: white;
     padding: 8px 12px;
     cursor: pointer;
-    border-radius: 0 8px 8px 0;
+    border-radius: 0 8px 8px 0; /* arrondis, droite */
     transition: background 0.3s ease;
 }
 
@@ -87,16 +167,16 @@ nav ul li a:hover {
     background: #0056b3;
 }
 
-/* Ce qui cache licone du menu sur grand screen */
+/* Cacher la checkbox et l'icône hamburger par défaut (sur grand écran) */
 #menu-toggle,
 .menu-icon {
     display: none;
 }
 
 
-/* Changer des trucs avec react quand je vais lapprendre */
-.hero { background: #007bff; 
-    color: #ffffff; 
+
+.hero { background: var(--couleur-principale); 
+    color: var(--couleur-blanc); 
      height: 65vh;/* de base cetait 60vh */
     display: flex;
   
@@ -105,7 +185,7 @@ nav ul li a:hover {
     text-align: center; 
     padding: 0 20px; 
 }
-    /* ce qui fait que les deux boutons sont bi */
+    /* ce qui fait que le bouton sont bi */
     .hero .container{
         display: flex;
         flex-direction: column;
@@ -113,131 +193,73 @@ nav ul li a:hover {
     }
 .hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
 .hero .sous-titre { font-size: 1.5rem; font-weight: 400; margin-bottom: 30px; }
-.cta-bouton { background: #ffffff; 
-    color: #007bff; 
+.cta-bouton { background: var(--couleur-blanc); 
+    color: var(--couleur-principale); 
     padding: 12px 15px; border-radius: 5px; 
     margin: 5px;
     width: fit-content;
     font-weight: 700; transition: all 0.3s ease; }
-.cta-bouton:hover { background: #f8f9fa; transform: translateY(-3px); }
+.cta-bouton:hover { background: var(--couleur-fond); transform: translateY(-3px); }
 
 
 #HowItWorks { text-align: center; }
 #HowItWorks p { max-width: 700px; margin: 0 auto; font-size: 1.1rem; }
 
-/*Section carte mouvante en ziaa*/
 
- .image-grid {
-    display: grid;
-    place-items: center;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
- }
- .card-1, .card-2 {
-    width: 200px;
-    height: 250px;
-    position: relative;
-    transform-style: preserve-3d;
-    transition:
-        transform .6s cubic-bezier(.4, 0, .2, 1);
-}
-.card-1:hover {  
-    transform: rotateY(180deg);
-}
-.card-2:hover {  
-    transform: rotateY(180deg);
-}
-.card-front,
-.card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* -webkit-box-reflect: below 5px linear-gradient(transparent, rgba(255, 255, 255, 0.2)); */
-}
-
-.card-front img {
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    object-fit: cover;
-}
-.card-back {
-    background: #212121;
-    color: #d4d3d3;
-    text-align: center;
-    transform: rotateY(180deg);
-}
-
-/* les box dinfo sur les mentor et student */
 .projets-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
-.projet-carte { background: #ffffff; border: 1px solid #ddd; border-radius: 5px; padding: 25px; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.projet-carte { background: var(--couleur-blanc); border: 1px solid #ddd; border-radius: 5px; padding: 25px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; }
 .projet-carte:hover { transform: translateY(-5px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
-.projet-carte h3 { color:#007bff; }
+.projet-carte h3 { color: var(--couleur-principale); }
 .projet-carte a { font-weight: 700; display: inline-block; margin-top: 10px; }
 
-/* pied de la page */
-footer { background: #343a40; color: #ccc; text-align: center; padding: 40px 0; }
+
+footer { background: var(--couleur-secondaire); color: #ccc; text-align: center; padding: 40px 0; }
 footer p { margin-bottom: 10px; }
-footer a { color: #ffffff; font-weight: 700; }
+footer a { color: var(--couleur-blanc); font-weight: 700; }
 footer .social-links a { margin: 0 10px; font-size: 1.2rem; }
 footer .copyright { font-size: 0.9rem; color: #999; margin-top: 20px; }
 
 
-/* Ce qui rend le design responsive */
+
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.5rem; }
     .hero .sous-titre { font-size: 1.2rem; }
     h2 { font-size: 2rem; }
     .projets-grid { grid-template-columns: 1fr; }
-    .image-grid {
-        grid-template-columns: 1fr;
-    }
-    #Logo img {
-        height: 60px; /* Ou la taille qui vous convient */
-    }
 
-    /* Style pour le menu mobile */
+    /* NOUVEAU : Styles pour le menu mobile */
     
-    /* Afficher licône menu */
+    /* Afficher l'icône hamburger */
     .menu-icon {
         display: block;
         cursor: pointer;
-        z-index: 10; /* Au dessus du conteneur de menu */
+        z-index: 10; /* Au-dessus du conteneur de menu */
     }
 
-    /* 3 barres */
+    /* Style des 3 barres de l'icône */
     .menu-icon span {
         display: block;
         width: 25px;
         height: 3px;
-        background: #343a40;
+        background: var(--couleur-secondaire);
         margin: 5px 0;
         transition: all 0.3s ease;
     }
 
-    /* Cacher le menu par def */
+    /* Cacher le menu par defaut */
     .menu-container {
-        display: none; /* invisible par def */
+        display: none; /* Caché par defaut */
         flex-direction: column;
         align-items: center;
-        gap: 25px;
+        gap: 10px;
         
-        /* Positionnement en PopUp */
+        /* Positionnement en pop-up */
         position: absolute;
-        top: 100%; /* En dessous du header */
+        top: 100%; /* Juste en dessous du header */
         left: 0;
         right: 0;
         
-        background: #ffffff;
+        background: var(--couleur-blanc);
         padding: 20px 0;
         box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
@@ -259,17 +281,15 @@ footer .copyright { font-size: 0.9rem; color: #999; margin-top: 20px; }
         justify-content: center;
     }
     .search-bar input[type="search"] {
-        width: 80%; /* Prend plus de place */
+        width: 80%; /* place de la barre de recherche apres */
     }
 
     
-    /* Quand la checkbox est cochee (grâce au clic sur le <label>), 
-       on affiche le .menu-container qui est son frere */
     #menu-toggle:checked ~ .menu-container {
         display: flex;
     }
 
-    /* Animation de l'icône en X */
+    /* Animation du X */
     #menu-toggle:checked ~ .menu-icon span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
