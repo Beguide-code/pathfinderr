@@ -1,0 +1,291 @@
+ :root {
+    --couleur-principale: #007bff;
+    --couleur-secondaire: #343a40;
+    --couleur-fond: #f8f9fa;
+    --couleur-blanc: #ffffff;
+}
+
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: var(--couleur-secondaire); }
+.container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+.section-padding { padding: 60px 0; }
+.section-grise { background-color: var(--couleur-fond); }
+h1, h2, h3 { margin-bottom: 20px; }
+h2 { text-align: center; font-size: 2.5rem; }
+p { margin-bottom: 15px; }
+a { color: var(--couleur-principale); text-decoration: none; }
+
+
+header {
+    background: var(--couleur-blanc);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Requis pour le positionnement du menu mobile */
+    position: relative;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--couleur-secondaire);
+    /* le logo reste au-dessus du menu mobile */
+    z-index: 10;
+}
+
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espace entre le menu et la recherche */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #0056b3;
+}
+
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input[type="search"] {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 8px 0 0 8px; /* arrondis,gauche */
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.search-bar button {
+    background: var(--couleur-principale);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0; /* arrondis, droite */
+    transition: background 0.3s ease;
+}
+
+.search-bar button:hover {
+    background: #0056b3;
+}
+
+/* Cacher la checkbox et l'icône hamburger par défaut (sur grand écran) */
+#menu-toggle,
+.menu-icon {
+    display: none;
+}
+
+.content-container {
+    padding-top: 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.filters-section {
+    padding: 20px;
+    background-color: #f4f6f9;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.primary-filters {
+    /* Utilisation de CSS Grid pour disposer les 3 filtres sur une ligne */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+/* 1. Cacher les filtres supplémentaires par défaut */
+.additional-filters-popup {
+    /* Masquer le contenu (hauteur 0 pour un effet de déploiement) */
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out, opacity 0.3s;
+    opacity: 0;
+    /* Style optionnel pour un panneau séparé */
+    margin-top: 10px; 
+    border-top: 1px solid #e9ecef;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+/* 2. Afficher les filtres supplémentaires lorsque la checkbox est cochée */
+#additional-filters-toggle:checked ~ .additional-filters-popup {
+    /* Le sélecteur :checked ~ .additional-filters-popup 
+       signifie : lorsque l'élément avec l'ID 'additional-filters-toggle' est coché, 
+       applique ces styles à l'élément '.additional-filters-popup' qui le suit. */
+    max-height: 200px; /* Une hauteur suffisante pour afficher le contenu */
+    padding: 15px;
+    opacity: 1;
+}
+
+/* 3. Cacher la checkbox (elle ne sert que d'interrupteur interne) */
+#additional-filters-toggle {
+    display: none;
+}
+
+
+.action-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-top: 10px;
+}
+
+
+.link-button {
+    /* Style pour faire ressembler le label à un lien */
+    color: #0056b3;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none; /* Enlever le soulignement par défaut du lien */
+    margin-right: auto; /* Pousser le bouton à gauche */
+}
+
+.latest-filter {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Styles des boutons (Delete Filter et Search subject) */
+.btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-delete {
+    background-color: white;
+    color: #dc3545; /* Rouge */
+    border: 1px solid #dc3545;
+    margin-left: auto; /* Pousse les boutons à droite */
+}
+
+.btn-search {
+    background-color: #0056b3;
+    color: white;
+}
+
+.opportunity-section{
+    padding-bottom: 20px;
+}
+
+footer { background: var(--couleur-secondaire); color: #ccc; text-align: center; padding: 40px 0; }
+footer p { margin-bottom: 10px; }
+footer a { color: var(--couleur-blanc); font-weight: 700; }
+footer .social-links a { margin: 0 10px; font-size: 1.2rem; }
+footer .copyright { font-size: 0.9rem; color: #999; margin-top: 20px; }
+
+@media (max-width: 768px) {
+    /* .hero h1 { font-size: 2.5rem; }
+    .hero .sous-titre { font-size: 1.2rem; }
+    h2 { font-size: 2rem; }
+    .projets-grid { grid-template-columns: 1fr; } */
+
+    /* NOUVEAU : Styles pour le menu mobile */
+    
+    /* Afficher l'icône hamburger */
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        z-index: 10; /* Au-dessus du conteneur de menu */
+    }
+
+    /* Style des 3 barres de l'icône */
+    .menu-icon span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: var(--couleur-secondaire);
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+
+    /* Cacher le menu par defaut */
+    .menu-container {
+        display: none; /* Caché par defaut */
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        
+        /* Positionnement en pop-up */
+        position: absolute;
+        top: 100%; /* Juste en dessous du header */
+        left: 0;
+        right: 0;
+        
+        background: var(--couleur-blanc);
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    
+    /* Le menu devient vertical */
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* La barre de recherche prend toute la largeur */
+    .search-bar {
+        width: 90%;
+        justify-content: center;
+    }
+    .search-bar input[type="search"] {
+        width: 80%; /* place de la barre de recherche apres */
+    }
+
+    
+    #menu-toggle:checked ~ .menu-container {
+        display: flex;
+    }
+
+    /* Animation du X */
+    #menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    #menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+    #menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
