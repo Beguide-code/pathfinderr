@@ -1,0 +1,367 @@
+:root {
+    --couleur-principale: #007bff;
+    --couleur-secondaire: #343a40;
+    --couleur-fond: #f8f9fa;
+    --couleur-blanc: #ffffff;
+}
+
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: var(--couleur-secondaire); }
+.container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+.section-padding { padding: 60px 0; }
+.section-grise { background-color: var(--couleur-fond); }
+h1, h2, h3 { margin-bottom: 20px; }
+h2 { text-align: center; font-size: 2.5rem; }
+p { margin-bottom: 15px; }
+a { color: var(--couleur-principale); text-decoration: none; }
+
+
+header {
+    background: var(--couleur-blanc);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Requis pour le positionnement du menu mobile */
+    position: relative;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--couleur-secondaire);
+    /* le logo reste au-dessus du menu mobile */
+    z-index: 10;
+}
+
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espace entre le menu et la recherche */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #0056b3;
+}
+
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input[type="search"] {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 8px 0 0 8px; /* arrondis,gauche */
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.search-bar button {
+    background: var(--couleur-principale);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0; /* arrondis, droite */
+    transition: background 0.3s ease;
+}
+
+.search-bar button:hover {
+    background: #0056b3;
+}
+
+/* Cacher la checkbox et l'icône hamburger par défaut (sur grand écran) */
+#menu-toggle,
+.menu-icon {
+    display: none;
+}
+
+.dashboard {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 50px;
+}
+
+.dashboard h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.content-grid {
+    display: grid;
+    /* Crée deux colonnes : 1/3 pour la première, 2/3 pour la seconde */
+    grid-template-columns: 1fr 2fr; 
+    gap: 30px;
+}
+
+/* --- Cartes Générales --- */
+.profile-card,
+.interest-card,
+.saved-items-card {
+    background-color: #fefdfd;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.05); /* Légère ombre */
+    margin-bottom: 20px; /* Espace entre les cartes */
+}
+.profile-card{
+    height: auto;
+    /* en fonction des bailles je vais voir comment changer ça apres */
+}
+
+/* --- Section Profil (Carte de gauche) --- */
+.profile-card h3 {
+    color: #777;
+    font-size: 0.8em;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.progress-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Style de l'indicateur de progression (le cercle) */
+
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    /* gap: 15px; */
+}
+
+.task-list-items {
+ list-style-type: none;
+}
+.task-list-items li { 
+  /* padding-bottom: 5px;
+  padding-top: 5px; */
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.task-list-items li:last-child {
+  border-bottom: none;
+}
+.task-list-items i {
+    font-size: 1.4em;
+    margin-right: 15px;
+}
+.task-list-items p{
+    color:black;
+}
+
+.edit-profile-btn {
+    background-color: #1a73e8;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    font-size: 1em;
+    margin-top: 40px;
+}
+.d-grid button{
+    margin-top:20px;
+}
+
+/* --- Section de Recherche --- */
+.interest-card {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si besoin */
+    align-items: center;
+    flex-direction: column;
+}
+
+.interest-card h2 {
+    flex-grow: 1; /* Prend l'espace restant */
+    font-size: 1.5em;
+    margin-bottom: 0;
+}
+
+.interest-card p{
+    margin: 10px 0 10px 0; /* top right bottom left*/
+}
+
+.explore-btn {
+    background: none;
+    color: #1a73e8;
+    border: 1px solid #1a73e8;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.explore-btn:hover{
+    background-color: #e8e8e8;
+    
+    border-color: #053e7b;
+}
+
+
+/* --- Section Éléments Sauvegardés --- */
+.saved-items-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.saved-list {
+    list-style: none;
+}
+
+.saved-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.saved-list li:last-child {
+    border-bottom: none;
+}
+
+.saved-list i {
+    font-size: 1.4em;
+    color: #ccc; /* Icônes en gris clair */
+    margin-right: 15px;
+}
+
+.saved-list a{
+    color:#1c1c1c;
+    text-decoration: none;
+}
+.saved-list a:hover{
+    color:#1a73e8;
+}
+.saved-list #applied-count,
+.saved-list #save-count,
+.saved-list #accepted-count {
+    margin-left: auto; /* Pousse le compteur à l'extrême droite */
+    font-weight: bold;
+    color: #000;
+}
+/* --- Footer --- */
+
+footer { background: var(--couleur-secondaire); color: #ccc; text-align: center; padding: 40px 0; }
+footer p { margin-bottom: 10px; }
+footer a { color: var(--couleur-blanc); font-weight: 700; }
+footer .social-links a { margin: 0 10px; font-size: 1.2rem; }
+footer .copyright { font-size: 0.9rem; color: #999; margin-top: 20px; }
+
+@media (max-width: 768px) {
+   
+
+    /* NOUVEAU : Styles pour le menu mobile */
+    
+    /* Afficher l'icône hamburger */
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        z-index: 10; /* Au-dessus du conteneur de menu */
+    }
+
+    /* Style des 3 barres de l'icône */
+    .menu-icon span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: var(--couleur-secondaire);
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+
+    /* Cacher le menu par defaut */
+    .menu-container {
+        display: none; /* Caché par defaut */
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        
+        /* Positionnement en pop-up */
+        position: absolute;
+        top: 100%; /* Juste en dessous du header */
+        left: 0;
+        right: 0;
+        
+        background: var(--couleur-blanc);
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    
+    /* Le menu devient vertical */
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* La barre de recherche prend toute la largeur */
+    .search-bar {
+        width: 90%;
+        justify-content: center;
+    }
+    .search-bar input[type="search"] {
+        width: 80%; /* place de la barre de recherche apres */
+    }
+
+    
+    #menu-toggle:checked ~ .menu-container {
+        display: flex;
+    }
+
+    /* Animation du X */
+    #menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    #menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+    #menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+    .content-grid {
+        /* Crée deux colonnes : 1/3 pour la première, 2/3 pour la seconde */
+        grid-template-columns: 1fr;
+    }
+}
