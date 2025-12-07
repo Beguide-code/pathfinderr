@@ -1,7 +1,7 @@
 
-import {formValidator} from './loginFormValidation.js';
+import {formValidator,validators} from './main.js';
 
-import {validators} from './loginFormValidation.js';
+ 
 
 const registerConfig = {
     fields:{
@@ -34,11 +34,7 @@ const registerConfig = {
             {validate: validators.required, message: "Confirm password"},
             {validate: validators.minLength(8), message: "Invalid password"}
         ]
- },
- onSubmit:(formData) =>{
-        console.log(`Login data: ${formData}`);
-    }
-
+ }
 };
 
      new formValidator("signup-form",registerConfig);

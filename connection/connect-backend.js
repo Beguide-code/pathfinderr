@@ -91,8 +91,8 @@ document.addEventListener('DOMContentLoaded', function(){
             isValid = false;
         }
 
-        if(studentData.password.length < 6){
-            showError('userPassword', 'Password must be at least 6 characters');
+        if(studentData.password.length < 8){
+            showError('userPassword', 'Password must be at least 8 characters');
             isValid = false;
         }
 
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 signupForm.reset();
 
                 setTimeout(()=>{
-                    window.location.href = 'SignUp.html';
+                    window.location.href = 'SignUpStudent2.html';
                 },1000);
             }
             else{
