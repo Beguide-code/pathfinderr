@@ -166,3 +166,21 @@
     input.success {
         border-color: green;
     }
+
+.eyeOpen,.eyeOpen2{
+    display: none;
+    /* position: absolute; */
+}
+.eyeClosed,.eyeClosed2{
+    display: flex;
+}
+
+.eye,.eye2{
+    position: absolute;
+    right: 5%;
+    bottom: 25%;
+}
+.positionEye,.positionEye2{
+    position: relative;
+
+}

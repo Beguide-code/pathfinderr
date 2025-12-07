@@ -1,5 +1,5 @@
 
-class formValidator{
+export class formValidator{
     constructor(formId,validationConfig){
         this.form = document.getElementById(formId);
         this.config = validationConfig;
@@ -89,7 +89,7 @@ class formValidator{
 
 }
 
-const validators = {
+export const validators = {
     required: (value) => value.trim() !== "",
     email: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value),
     minLength: (min) => (value) => value.length >= min,
@@ -116,10 +116,12 @@ const loginConfig = {
     }
 }
 
-new formValidator("login-form",loginConfig);
+    //  new formValidator("login-form",loginConfig);
 
 
-function showHidePassword(){
+
+
+ function showHidePassword(){
     let toggle = document.querySelectorAll(".eye");
     let openEye = document.querySelector(".eyeOpen");
     let closeEye = document.querySelector(".eyeClosed");
@@ -131,7 +133,7 @@ function showHidePassword(){
             closeEye.style.display = "none";
             openEye.style.display = "flex";
             
-        }
+         }
         else{
             input.type = "password";
             openEye.style.display = "none";
@@ -143,6 +145,8 @@ function showHidePassword(){
     
 }
 showHidePassword();
+
+
 
 
 
