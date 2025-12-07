@@ -176,14 +176,16 @@ nav ul li a:hover {
 .task-list-items li:last-child {
   border-bottom: none;
 }
+
 .task-list-items i {
     font-size: 1.4em;
+    color: #ccc;
     margin-right: 15px;
 }
 .task-list-items p{
     color:black;
+    text-align: center;
 }
-
 .edit-profile-btn {
     background-color: #1a73e8;
     color: #fff;

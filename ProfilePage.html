@@ -10,9 +10,9 @@
 </head>
 <body>
 
-     <header>
+  <header>
         <div class="container">
-             <a href="index.html" id="Logo">
+             <a href="#" id="Logo">
                 <img src=".png" alt="Logo" height="80">
             </a>
 
@@ -55,33 +55,36 @@
                    <ul class="task-list-items">
                       <li>
                         <i class="fa fa-tag"></i>
-                        <p id="user-gpa"> ---GPA---</p> 
+                        <p id="user-gpa"> ---GPA--- :</p> 
                       </li>
                       <li>
                         <i class="fa fa-graduation-cap"></i>
-                        <p id="user-major"> ---Major---</p> 
+                        <p id="user-major" > ---Major--- :</p>
                       </li>
                        <li>
                         <i class="fa fa-calendar"></i>
-                        <p id="user-graduation-year"> ---Graduation's year---</p> 
+                        <p id="user-graduation-year"> ---Graduation's year--- :</p>
                       </li>
                        <li>
                         <i class="fa fa-envelope"></i>
-                        <p id="user-mail"> ---Email--- </p> 
+                        <p id="user-mail" > ---Email---</p>
                       </li>
                    </ul>
                     
                 </div>
 
-                <button class="edit-profile-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">Edit Profile</button>
+                <button class="edit-profile-btn" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">Edit Profile</button>
 
-                <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
-                   <div class="offcanvas-header">
-                     <h5 class="offcanvas-title" id="staticBackdropLabel">Edit Your Profile</h5>
-                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                   </div>
-                  <div class="offcanvas-body">
-                    <div>
+     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Edite your Profile</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+         <div>
                         <div class="mb-3">
                          <label for="formGroupExampleInput" class="form-label">Your GPA</label>
                          <input type="number" class="form-control" id="formGroupExampleInput" placeholder="Ex: 3.5" name="gpa" step="any" min="0" max="4.0">
@@ -103,14 +106,21 @@
                           <textarea class="form-control" placeholder="Ex: AI, technical application of AI, etc" id="floatingTextarea2" style="height: 100px"></textarea>
                           <label for="floatingTextarea2">Your interests</label>
                         </div>
-                         
-                        <div class="d-grid gap-1">
-                           <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
 
                     </div>
-                  </div>
-                </div>
+      </div>
+      <div class="modal-footer">
+
+                       <div class="d-grid gap-1 mx-auto">
+                           <button type="submit" class="btn btn-primary">Save</button>
+                        </div>
+     </div>
+    </div>
+ </div>
+</div>
+
+
+
             </section>
 
             <section class="main-content">
