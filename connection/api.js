@@ -1,4 +1,4 @@
-const API_BASED_URL = 'htt://localhost:5000/api';
+const API_BASED_URL = 'http://localhost:5000/api';
 
 class APIService{
 
