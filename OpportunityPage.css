@@ -1,4 +1,4 @@
- :root {
+         :root {
     --couleur-principale: #007bff;
     --couleur-secondaire: #343a40;
     --couleur-fond: #f8f9fa;
@@ -147,6 +147,7 @@ nav ul li a:hover {
     max-height: 200px; /* Une hauteur suffisante pour afficher le contenu */
     padding: 15px;
     opacity: 1;
+    display: flex !important; 
 }
 
 /* 3. Cacher la checkbox (elle ne sert que d'interrupteur interne) */
@@ -289,3 +290,7 @@ footer .copyright { font-size: 0.9rem; color: #999; margin-top: 20px; }
         transform: rotate(-45deg) translate(5px, -5px);
     }
 }
+ @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }

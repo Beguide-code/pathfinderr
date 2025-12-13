@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pathfinderr</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="OpportunityPage.css">
     </head>
 <body>
- <header>
+  <header>
         <div class="container">
              <a href="Homepage.html" id="Logo">
                 <img src=".png" alt="Logo" height="80">
@@ -25,7 +26,7 @@
                        
                         <li><a href="index.html">Home page</a></li>
                         <li><a href="ProfilePage.html">My profile</a></li>
-                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="DashboardSummary.html">Dashboard</a></li>
                         <li><a href="#contact">Contact Us</a></li>
                     </ul>
                 </nav>
@@ -40,65 +41,74 @@
 
   <main class="content-container">  
       <section class="filters-section">
-        <div class="primary-filters">
-           <select class="form-select" aria-label="Default select example">
-              <option selected>Type</option>
-              <option value="1">Scholarship</option>
-              <option value="2">Intership</option>
-              <option value="3">Fellowship</option>
-           </select>
-
-           <select class="form-select" aria-label="Default select example">
-              <option selected>Country</option>
-              <option value="1">Turkey</option>
-              <option value="2">Hungary</option>
-              <option value="3">Suisse</option>
-           </select>
-
-           <select class="form-select" aria-label="Default select example">
-              <option selected>Majors</option>
-              <option value="1">Computer science</option>
-              <option value="2">International relation...</option>
-              <option value="3">Swimming</option>
-           </select>
-        </div>
-           
-   
-        <!-- les weps caches par defaut -->
-        <input type="checkbox" id="additional-filters-toggle" hidden>
-               <div class="additional-filters-popup">
-                     <select class="form-select" aria-label="Default select example">
-                         <option selected>MinGPA</option>
-                         <option value="1">1.5</option>
-                         <option value="2">2.0</option>
-                         <option value="3">2.5</option>
-                         <option value="3">3.0</option>
-                         <option value="3">3.5</option>
-                         <option value="3">4.0</option>
-                     </select>
-                       
-                      <select class="form-select" aria-label="Default select example">
-                        <option selected>Put something relative to a date</option>
-                        <option value="1">nothing now</option>
-                        <option value="2">Nothing now 2</option>
-                        <option value="3">Nothing 3</option>
-                     </select>
-               </div>
+            
+            <!-- 
+                AJOUT DES CLASSES BOOTSTRAP ICI :
+                d-flex : active flexbox
+                flex-column : empile les éléments verticalement (mobile par défaut)
+                flex-md-row : met les éléments en ligne à partir des écrans moyens (iPad/Desktop)
+                gap-2 : ajoute de l'espace entre les selects
+            -->
+            <div class="primary-filters d-flex flex-column flex-md-row gap-2">
+                <select class="form-select" aria-label="Type">
+                    <option selected>Type</option>
+                    <option value="1">Scholarship</option>
+                    <option value="2">Intership</option>
+                    <option value="3">Fellowship</option>
+                </select>
         
+                <select class="form-select" aria-label="Country">
+                    <option selected>Country</option>
+                    <option value="1">Turkey</option>
+                    <option value="2">Hungary</option>
+                    <option value="3">Suisse</option>
+                </select>
         
- <!-- si la methode du additional filter ne marche pas je continue avec les trucs normaux  -->
-        <div class="action-bar">
-            <!-- a rechercher comment faire  -->
-              
-             <label for="additional-filters-toggle" class="link-button">
-        Additional filters v 
-        </label>
-
-        <button class="btn btn-delete">Delete filter</button>
-        <button class="btn btn-search">Search subject</button>
-        </div>
+                <select class="form-select" aria-label="Majors">
+                    <option selected>Majors</option>
+                    <option value="1">Computer science</option>
+                    <option value="2">International relation...</option>
+                    <option value="3">Swimming</option>
+                </select>
+            </div>
+               
+            <!-- Checkbox caché pour gérer l'ouverture/fermeture -->
+            <input type="checkbox" id="additional-filters-toggle" hidden>
+            
+            <!-- 
+                Même logique pour les filtres additionnels :
+                On ajoute mt-2 (margin top) pour espacer du bloc précédent
+            -->
+            <div class="additional-filters-popup flex-column flex-md-row gap-2 mt-2">
+                <select class="form-select" aria-label="MinGPA">
+                    <option selected>MinGPA</option>
+                    <option value="1">1.5</option>
+                    <option value="2">2.0</option>
+                    <option value="3">2.5</option>
+                    <option value="4">3.0</option>
+                    <option value="5">3.5</option>
+                    <option value="6">4.0</option>
+                </select>
+                
+                <!-- Votre input date intégré ici -->
+                <input type="date" class="form-control" aria-label="Sélectionner une date">
+            </div>
+            
+            
+            <!-- Barre d'action -->
+            <div class="action-bar d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3">
+                
+                <label for="additional-filters-toggle" class="link-button mb-0">
+                    Additional filters <i class="bi bi-plus-circle"></i> 
+                </label>
         
-      </section>
+                <div class="d-flex gap-2 w-100 w-sm-auto justify-content-end">
+                    <button class="btn btn-outline-danger">Delete filter</button>
+                    <button class="btn btn-primary">Search subject</button>
+                </div>
+            </div>
+            
+        </section>
 
       <section class="opportunity-section">
              <div class="row row-cols-1 row-cols-md-2 g-4">
