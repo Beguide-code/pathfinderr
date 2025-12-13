@@ -49,7 +49,7 @@ const LoginConnector = {
     saveAuthData: function(token,userData){
         localStorage.setItem('pathfinderr_token',token);
         localStorage.setItem('pathfinderr_user',JSON.stringify(userData));
-        console.log('Login successful for',userData.email);
+        // console.log('Login successful for',userData.email);
     }
 };
 
