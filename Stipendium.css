@@ -1,0 +1,224 @@
+body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+header {
+    background:white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Requis pour le positionnement du menu mobile */
+    position: relative;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--couleur-secondaire);
+    /* le logo reste au-dessus du menu mobile */
+    z-index: 10;
+}
+
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espace entre le menu et la recherche */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-bottom: 0; /* Correction Bootstrap default */
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    font-weight: 700;
+    transition: color 0.3s ease;
+    text-decoration: none; /* Correction pour les liens */
+    color: #343a40;
+}
+
+nav ul li a:hover {
+    color: #0056b3;
+}
+
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input[type="search"] {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 8px 0 0 8px; /* arrondis,gauche */
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.search-bar button {
+    background: #007bff;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0; /* arrondis, droite */
+    transition: background 0.3s ease;
+}
+
+.search-bar button:hover {
+    background: #0056b3;
+}
+
+/* Cacher la checkbox et l'icône hamburger par défaut (sur grand écran) */
+#menu-toggle,
+.menu-icon {
+    display: none;
+}
+        
+        .scholarship-card {
+            /* max-width: 650px;  */
+            margin: 0 auto;
+            border: 1px solid #d1d5db;
+            border-radius: 10px;
+            background: white;
+             padding-top: 30px;
+        }
+
+        
+        .icon-gold { color: #f59e0b; }
+        .icon-green { color: #10b981; }
+        .icon-red { color: #ef4444; }
+        .icon-blue { color: #3b82f6; }
+        .text-muted-custom { color: #6b7280; }
+
+        .similar-list {
+            border-left: 3px solid #9ca3af;
+            padding-left: 15px;
+        }
+
+        .btn-action {
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stipend-detail {
+            font-size: 0.9rem;
+            background-color: #f3f4f6;
+            padding: 8px;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        
+        /* Nouveaux styles pour la section pays */
+        .country-badge {
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        #links a, #links button {
+            flex: 1; /* Chaque bouton prend une part égale de l'espace */
+            text-align: center;
+        }
+        #counrty{
+            flex:1;
+            text-align: center;
+        }
+
+footer { background: #343a40; color: #ccc; text-align: center; padding: 40px 0; }
+footer p { margin-bottom: 10px; }
+footer a { color: white; font-weight: 700; text-decoration: none; }
+footer .social-links a { margin: 0 10px; font-size: 1.2rem; }
+footer .copyright { font-size: 0.9rem; color: #999; margin-top: 20px; }
+
+@media (max-width: 768px) {
+   
+
+    /* NOUVEAU : Styles pour le menu mobile */
+    
+    /* Afficher l'icône hamburger */
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        z-index: 10; /* Au-dessus du conteneur de menu */
+    }
+
+    /* Style des 3 barres de l'icône */
+    .menu-icon span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #343a40;
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+
+    /* Cacher le menu par defaut */
+    .menu-container {
+        display: none; /* Caché par defaut */
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        
+        /* Positionnement en pop-up */
+        position: absolute;
+        top: 100%; /* Juste en dessous du header */
+        left: 0;
+        right: 0;
+        
+        background: white;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    
+    /* Le menu devient vertical */
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        padding-left: 0; /* Correction padding */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* La barre de recherche prend toute la largeur */
+    .search-bar {
+        width: 90%;
+        justify-content: center;
+    }
+    .search-bar input[type="search"] {
+        width: 80%; /* place de la barre de recherche apres */
+    }
+
+    
+    #menu-toggle:checked ~ .menu-container {
+        display: flex;
+    }
+
+    /* Animation du X */
+    #menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    #menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+    #menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}

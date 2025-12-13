@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Pathfinderr</title>
+    <link rel="stylesheet" href="TurkiyeBurslari.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+             <a href="Homepage.html" id="Logo">
+                <img src=".png" alt="Logo" height="80">
+            </a>
+
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span></span> <span></span> <span></span> </label>
+
+            <div class="menu-container">
+                <nav>
+                    <ul>
+                        
+                        <li><a href="index.html">Home page</a></li>
+                        <li><a href="OpportunityPage.html">Opportunities</a></li>
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#contact">Contact us</a></li>
+                        
+                    </ul>
+                </nav>
+                
+                <form class="search-bar">
+                    <input type="search" placeholder="Rechercher...">
+                    <button type="submit">🔍</button> </form>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="container mb-5 mt-5"> <div class="card scholarship-card shadow p-4">
+        
+        <div class="mb-3">
+            <h5 class="fw-bold mb-1 text-dark">
+                <i class="fas fa-university text-secondary me-2"></i> Türkiye Bursları
+            </h5>
+            <small class="text-muted text-uppercase fw-bold">Republic of Türkiye</small>
+            
+            <div class="d-flex flex-wrap gap-2 align-items-center text-secondary mt-3 mb-2 fw-medium">
+                <span><i class="fas fa-star icon-gold"></i> Full Scholarship</span>
+                <span>|</span>
+                <span class="text-dark"><i class="fas fa-plane icon-gold"></i> Tuition + Stipend + Flight</span>
+                <span>|</span>
+                <span><i class="fas fa-map-marker-alt icon-red"></i> Türkiye</span>
+            </div>
+
+            <div class="text-danger fw-bold mt-2">
+                <i class="fas fa-clock me-1"></i> Deadline: February 20, 2026
+            </div>
+        </div>
+
+        <hr class="text-secondary opacity-25">
+
+        <div class="mb-4">
+            <h6 class="text-uppercase text-secondary fw-bold mb-2">Description</h6>
+            <p class="card-text text-secondary">
+                Türkiye Burslari is a government-funded, competitive scholarship program, awarded to outstanding students and researchers to pursue full-time or short-term programs at the top universities in Türkiye.
+            </p>
+            
+            <div class="stipend-detail text-dark">
+                <strong><i class="fas fa-wallet icon-blue me-1"></i> What is covered:</strong>
+                <ul class="mb-0 ps-3 mt-1">
+                    <li><strong>Tuition-free</strong> university placement.</li>
+                    <li><strong>Monthly Stipend:</strong> Paid monthly for BA, MA, and PhD levels (amounts adjusted annually).</li>
+                    <li><strong>Accommodation:</strong> Free state dormitory placement.</li>
+                    <li><strong>Flight Ticket:</strong> One-off round-trip flight ticket (Start & End of studies).</li>
+                    <li><strong>Language:</strong> 1-year free Turkish Language Course (TÖMER).</li>
+                    <li><strong>Health Insurance:</strong> Full coverage.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <h6 class="text-uppercase text-secondary fw-bold mb-2">
+                <i class="fas fa-globe text-secondary me-2"></i>Eligible Countries
+            </h6>
+            <p class="text-secondary mb-2">
+                The program is open to citizens of <strong>all countries</strong> worldwide.
+            </p>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge bg-light text-dark border country-badge">Global (All Nations)</span>
+                <span class="badge bg-light text-dark border country-badge">Undergraduate</span>
+                <span class="badge bg-light text-dark border country-badge">Master's</span>
+                <span class="badge bg-light text-dark border country-badge">PhD</span>
+            </div>
+            <a href="https://www.turkiyeburslari.gov.tr/calendar" target="_blank" class="btn btn-outline-primary btn-sm fw-bold">
+                <i class="fas fa-external-link-alt me-1"></i> Check Application Calendar
+            </a>
+        </div>
+        <div class="mb-4">
+            <h6 class="text-uppercase text-secondary fw-bold mb-2">Requirements</h6>
+            <ul class="list-unstyled text-secondary">
+                <li class="mb-2 d-flex">
+                    <i class="fas fa-check-circle icon-green me-2 mt-1"></i>
+                    <span><strong>Academic Merit:</strong> Min. 70% (Undergraduate), 75% (Graduate), 90% (Health Sciences).</span>
+                </li>
+                <li class="mb-2 d-flex">
+                    <i class="fas fa-check-circle icon-green me-2 mt-1"></i>
+                    <span><strong>Age Limit:</strong> Under 21 (BA), Under 30 (MA), Under 35 (PhD).</span>
+                </li>
+                <li class="mb-2 d-flex">
+                    <i class="fas fa-check-circle icon-green me-2 mt-1"></i>
+                    <span><strong>Documents:</strong> Diploma/Transcripts, ID/Passport, Letter of Intent.</span>
+                </li>
+            </ul>
+        </div>
+
+        <div id="links" class="d-flex gap-4 mb-4">
+            <a href="https://tbbs.turkiyeburslari.gov.tr/" class="btn btn-primary btn-sm btn-action px-3 py-2">APPLY NOW</a>
+            <button id="save-button" class="btn btn-outline-secondary btn-sm btn-action px-3 py-2">SAVE FOR LATER</button>
+            <button id="share-button" class="btn btn-outline-secondary btn-sm btn-action px-3 py-2">SHARE</button>
+        </div>
+                      <div>
+            <h6 class="text-uppercase text-secondary fw-bold mb-3" style="font-size: 0.8rem;">Similar Opportunities</h6>
+            <div class="similar-list">
+                <ul class="list-unstyled mb-0 text-secondary" style="font-size: 0.9rem;">
+                    <li class="mb-2">• <a href="#" class="text-decoration-none text-secondary">MEXT Scholarship (Japan)</a></li>
+                    <li class="mb-2">• <a href="#" class="text-decoration-none text-secondary">GKS (Korea)</a></li>
+                    <li>• <a href="Stipendium.html" class="text-decoration-none text-secondary">Stipendium Hungaricum</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+     <footer id="contact">
+        <div class="container">
+            <p>Contact-us !</p>
+            <p>Email 1: <a href="mailto:beguidebeguidemarcelclaude@gmail.com">beguidebeguidemarcelclaude@gmail.com</a></p>
+            <p>Email 2: <a href="mailto:davidparfait07@gmail.com">davidparfait07@gmail.com</a></p>
+            <div class="social-links">
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">GitHub</a>
+            </div>
+            <p class="copyright">&copy; 2025 Pathfinderr. All rights reserved..</p>
+        </div>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
