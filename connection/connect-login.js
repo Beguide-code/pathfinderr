@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded',function(){
                     LoginConnector.showMessage('Login successful! Redirecting...',false);
 
                     setTimeout(()=>{
-                        window.location.href = 'ProfilePage.html'; //dashboard normally
+                        window.location.href = 'DashboardSummary.html'; 
                     },1500);
                 }
                 else{
