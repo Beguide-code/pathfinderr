@@ -1,0 +1,116 @@
+body {
+        font-size: .875rem;
+        background-color: #f8f9fa;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .feather {
+        width: 16px;
+        height: 16px;
+      }
+
+      /* Navbar styling */
+      .navbar-brand {
+        padding-top: .75rem;
+        padding-bottom: .75rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #0d6efd !important;
+        background-color: transparent;
+        box-shadow: none;
+      }
+      
+      .navbar .navbar-toggler {
+        top: .25rem;
+        border-color: rgba(0,0,0,0.1);
+      }
+      
+      header.navbar {
+          border-bottom: 1px solid #e5e5e5;
+          min-height: 60px; /* On assure une hauteur minimale */
+      }
+
+      @media (min-width: 768px) {
+        .sidebar {
+            position: fixed;
+            /* CORRECTION: On fixe le top à 60px pour commencer SOUS la navbar */
+            top: 48px; 
+            bottom: 0;
+            left: 0;
+            z-index: 100;
+            /* On retire le padding excessif car 'top' gère l'espacement maintenant */
+            padding: 0; 
+            box-shadow: inset -1px 0 0 rgba(0, 0, 0, .05);
+            flex-direction: column; 
+        }
+        
+        .sidebar-sticky {
+            /* On ajuste la hauteur : 100% de la vue moins la hauteur du header */
+            height: calc(100vh - 60px);
+            overflow-x: hidden;
+            overflow-y: auto; 
+        }
+      }
+
+      .nav-link {
+        font-weight: 500;
+        color: #333;
+        padding: 10px 15px;
+      }
+      .nav-link .feather, .nav-link i {
+        margin-right: 4px;
+        color: #727272;
+      }
+      .nav-link.active {
+        color: #0d6efd;
+        background-color: rgba(13, 110, 253, 0.05);
+      }
+      .nav-link.active .feather, .nav-link.active i {
+        color: inherit;
+      }
+      
+      #navbarSearch {
+        position: fixed;
+        top: 60px; /* Ajusté pour correspondre à la hauteur navbar */
+        left: 0;
+        right: 0;
+        z-index: 1020;
+        background-color: #ffffff;
+        border-bottom: 1px solid #dee2e6;
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+      }
+
+      /* ce que jai ajoute ici pour les cartes de suivi dapplication */
+
+       .tracking-card {
+            border: none;
+            border-left: 4px solid #ccc; /* Bordure par défaut */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+            margin-bottom: 15px;
+        }
+
+        .tracking-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Codes couleurs pour les statuts */
+        .status-interview { border-left-color: #ffc107 !important; } /* Jaune */
+        .status-applied { border-left-color: #198754 !important; }   /* Vert */
+        .status-interested { border-left-color: #0d6efd !important; } /* Bleu */
+        
+        .status-dot {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-left: 5px;
+        }
+        
+        .dot-yellow { background-color: #ffc107; }
+        .dot-green { background-color: #198754; }
+        .dot-blue { background-color: #0d6efd; }
+        #status  {
+            margin-top: 10px;
+        }
+        
