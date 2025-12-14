@@ -265,6 +265,12 @@ function setupFilters(){
         if(profileLink && currentUser){
             profileLink.href = `ProfilePage.html?id${currentUser.id}`;
         }
+
+        const DashboardLink = document.querySelector('a[href="DashboardSummary.html"]');
+        if(DashboardLink && currentUser){
+            DashboardLink.href = `DashboardSummary.html?id${currentUser.id}`;
+        }
+
         const homepageLink = document.querySelector('a[href="index.html"]');
         if(homepageLink){
             homepageLink.addEventListener('click',(e)=>{
