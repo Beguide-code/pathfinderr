@@ -24,10 +24,9 @@ body {
 }
 
 /* Conteneur du logo zia */
-.logo-content {
-    width: 60px;
-    height: 60px;
-    /* background-color: #007bff; */
+.logo-content { 
+     width: 80px;  
+    height: 80px;
      border-radius: 50%; /*optionel si le logo est deja en forme de cercle */
     margin: 0 auto 1.5rem; /* Centrer et espacer en dessous */
     display: flex;
@@ -36,8 +35,8 @@ body {
 }
 
 .logo {
-    width: 32px;
-    height: 32px;
+    width: 80px;
+    height: 80px;
 }
 
 h2 {
