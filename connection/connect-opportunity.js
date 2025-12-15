@@ -135,14 +135,14 @@ function renderOpportunities(){
                     ${deadlineText}
                     ${opp.min_gpa ? `<small class="text-muted d-block"><i class="fas fa-star me-1"></i> Min GPA: ${opp.min_gpa}</small>` : ''}
                 </div>
-                <a href="opportunity-detail.html?id=${opp.id}" class="btn btn-primary mt-3">See more</a>
+                <a href="TurkiyeBurslari.html" class="btn btn-primary mt-3">See more</a> 
             </div>
         </div>
         `;
         container.appendChild(col);
     });
 }
-
+// opportunity-detail.html?id=${opp.id} (for line 138)
 function setupFilters(){
     const searchInput = document.querySelector('.search-bar input[type="search"]');
     const searchButton = document.querySelector('.search-bar button');
