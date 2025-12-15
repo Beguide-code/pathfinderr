@@ -53,6 +53,15 @@ const LoginConnector = {
     }
 };
 
+function getReturnUrl(){
+    const urlParams = new URLSearchParams(window.location.search);
+    const returnUrl =  urlParams.get('return');
+    if(!returnUrl){
+        return;
+    }
+    return decodeURIComponent(returnUrl);
+}
+
 document.addEventListener('DOMContentLoaded',function(){
     const loginForm = document.getElementById('login-form');
     if(!loginForm) return;
@@ -104,9 +113,10 @@ document.addEventListener('DOMContentLoaded',function(){
                 if(result.success){
                     LoginConnector.saveAuthData(result.data.token,result.data);
                     LoginConnector.showMessage('Login successful! Redirecting...',false);
+                    const returnUrl = getReturnUrl();
 
                     setTimeout(()=>{
-                        window.location.href = 'DashboardSummary.html'; 
+                        window.location.href = returnUrl; 
                     },1500);
                 }
                 else{
