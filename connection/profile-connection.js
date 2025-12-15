@@ -27,7 +27,8 @@ function checkAuth(){
     const userStr = localStorage.getItem('pathfinderr_user');
 
     if(!token || !userStr){
-        window.location.href = 'login.html';
+        const returnUrl = encodeURIComponent(window.location.pathname + window.location.search);
+        window.location.href = `LogIn.html?return=${returnUrl}`;
         return false;
     }
 
