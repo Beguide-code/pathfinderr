@@ -14,7 +14,7 @@ function checkAuth(){
 
     if(!token || !userStr){
         const returnUrl = encodeURIComponent(window.location.pathname);
-        window.location.href = `login.html?return=${returnUrl}`;
+        window.location.href = `LogIn.html?return=${returnUrl}`;
         return false;
     }
     currentUser = JSON.parse(userStr);

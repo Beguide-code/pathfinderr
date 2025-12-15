@@ -313,11 +313,11 @@ document.addEventListener('DOMContentLoaded', function(){
             window.location.href = 'OpportunityPage.html';
         });
     }
-    const applicationLinks = document.querySelectorAll('.saved-list a');
-    applicationLinks.forEach(link=> {
-        link.addEventListener('click',function(event){
-            event.preventDefault();
-            showMessage('Application lists feature coming soon','info');
-        });
-    });
+    // const applicationLinks = document.querySelectorAll('.saved-list a');
+    // applicationLinks.forEach(link=> {
+    //     link.addEventListener('click',function(event){
+    //         event.preventDefault();
+    //         showMessage('Application lists feature coming soon','info');
+    //     });
+    // });
 });

@@ -56,8 +56,8 @@ const LoginConnector = {
 function getReturnUrl(){
     const urlParams = new URLSearchParams(window.location.search);
     const returnUrl =  urlParams.get('return');
-    if(!returnUrl){
-        return;
+    if(!returnUrl || returnUrl === 'undefined'){
+        return 'DashboardSummary.html';
     }
     return decodeURIComponent(returnUrl);
 }

@@ -52,7 +52,7 @@ export class formValidator{
     handleSubmit(){
         if(this.validateForm()){
             const formData = this.getFormData();
-            this.config.onSubmit(formData);
+            // this.config.onSubmit(formData);
         }
     }
 
