@@ -8,7 +8,7 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: var(--couleur-secondaire); }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: var(--couleur-secondaire); }
 .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
 .section-padding { padding: 60px 0; }
 .section-grise { background-color: var(--couleur-fond); }
